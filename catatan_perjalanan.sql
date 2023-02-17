@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2023 at 06:15 AM
+-- Generation Time: Feb 17, 2023 at 04:20 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -18,16 +18,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `pedulidiri`
+-- Database: `catatan_perjalanan`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `catatan`
+-- Table structure for table `catatans`
 --
 
-CREATE TABLE `catatan` (
+CREATE TABLE `catatans` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `tanggal` date NOT NULL,
   `waktu` time NOT NULL,
@@ -38,11 +38,13 @@ CREATE TABLE `catatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `catatan`
+-- Dumping data for table `catatans`
 --
 
-INSERT INTO `catatan` (`id`, `tanggal`, `waktu`, `lokasi`, `suhu_tubuh`, `created_at`, `updated_at`) VALUES
-(1, '2023-02-10', '11:43:00', 'Malas', 2, NULL, NULL);
+INSERT INTO `catatans` (`id`, `tanggal`, `waktu`, `lokasi`, `suhu_tubuh`, `created_at`, `updated_at`) VALUES
+(1, '2023-02-17', '21:59:00', 'Bandung', 36, NULL, NULL),
+(2, '2023-02-16', '11:07:00', 'Jakarta', 35, NULL, NULL),
+(3, '2023-02-10', '00:26:00', 'Malas', 23, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -81,7 +83,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(5, '2023_02_01_042334_create_catatan_table', 1);
+(5, '2023_02_01_042334_create_catatans_table', 1);
 
 -- --------------------------------------------------------
 
@@ -136,16 +138,16 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'naja', 'naja@gmail.com', NULL, '$2y$10$kwe6M0PZnzscs4pn7oDOXe8DtreijyolFbEpGLXjHnA70Yv6JAalO', NULL, '2023-01-31 21:50:27', '2023-01-31 21:50:27');
+(1, 'Naja', 'trirazaqa@gmail.com', NULL, '$2y$10$p4XE6wJa0l/ViJ5WJdc2pu4.TpEfeMAiS1R2pA0aSe.nh8yPCuso2', NULL, '2023-02-15 19:48:11', '2023-02-15 19:48:11');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `catatan`
+-- Indexes for table `catatans`
 --
-ALTER TABLE `catatan`
+ALTER TABLE `catatans`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -165,7 +167,7 @@ ALTER TABLE `migrations`
 -- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
-  ADD PRIMARY KEY (`email`);
+  ADD KEY `password_resets_email_index` (`email`);
 
 --
 -- Indexes for table `personal_access_tokens`
@@ -187,10 +189,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `catatan`
+-- AUTO_INCREMENT for table `catatans`
 --
-ALTER TABLE `catatan`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `catatans`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`

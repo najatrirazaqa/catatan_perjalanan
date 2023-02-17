@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Mazer Admin Dashboard</title>
+    <title>Login - Catatan Perjalanan</title>
     <link rel="stylesheet" href="{{ asset('dist') }}/assets/css/main/app.css" />
     <link rel="stylesheet" href="{{ asset('dist') }}/assets/css/pages/auth.css" />
     <link rel="shortcut icon" href="{{ asset('dist') }}/assets/images/logo/favicon.svg" type="image/x-icon" />
@@ -16,10 +16,10 @@
         <div class="row h-100">
             <div class="col-lg-5 col-12">
                 <div id="auth-left">
-                    <div class="auth-logo">
+                    {{-- <div class="auth-logo">
                         <a href="/login"><img src="{{ asset('dist') }}/assets/images/logo/logo.svg"
                                 alt="Logo" /></a>
-                    </div>
+                    </div> --}}
                     <h1 class="auth-title">Log in.</h1>
                     <p class="auth-subtitle mb-5">
                         Log in with your data that you entered during
@@ -68,18 +68,6 @@
                         <p class="text-gray-600">
                             Don't have an account?
                             <a href="/register" class="font-bold">Register</a>.
-                        </p>
-                        <p>
-                            @if (Route::has('password.request'))
-                                <a class="font-bold" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Password?') }}
-                                </a>
-                            @endif
-                            {{-- <a
-                                    class="font-bold"
-                                    href="{{asset('dist')}}/auth-forgot-password.html"
-                                    >Forgot password?</a
-                                >. --}}
                         </p>
                     </div>
                 </div>

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('catatan', function (Blueprint $table) {
+        Schema::create('catatans', function (Blueprint $table) {
             $table->id();
             $table->date('tanggal');
             $table->time('waktu');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('catatan');
+        Schema::dropIfExists('catatans');
     }
 };

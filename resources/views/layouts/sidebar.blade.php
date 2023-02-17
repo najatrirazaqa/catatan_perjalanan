@@ -4,11 +4,10 @@
             <div class="sidebar-wrapper active">
                 <div class="sidebar-header position-relative">
                     <div class="d-flex justify-content-between align-items-center">
-                        <div class="logo">
-                            <a href="{{ asset('dist') }}/index.html"><img
-                                    src="{{ asset('dist') }}/assets/images/logo/logo.svg" alt="Logo"
+                        {{-- <div class="logo">
+                            <a href="/"><img src="{{ asset('dist') }}/assets/images/logo/logo.svg" alt="Logo"
                                     srcset=""></a>
-                        </div>
+                        </div> --}}
                         <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20"
@@ -47,26 +46,27 @@
                 <div class="sidebar-menu">
                     <ul class="menu">
                         <li class="sidebar-title">Menu</li>
-                        <li class="sidebar-item  ">
+                        <li class="sidebar-item {{ Request::is('/') ? 'active' : '' }}">
                             <a href="/
                             " class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
+                                <i class="bi bi-house"></i>
                                 <span>Home</span>
                             </a>
                         </li>
-                        <li class="sidebar-item  ">
+                        <li class="sidebar-item {{ Request::is('catatan_perjalanan') ? 'active' : '' }}">
                             <a href="/catatan_perjalanan" class='sidebar-link'>
-                                <i class="bi bi-file-earmark-medical-fill"></i>
+                                <i class="bi bi-journals"></i>
                                 <span>Catatan Perjalanan</span>
                             </a>
                         </li>
-                        <li class="sidebar-item  ">
+                        <li class="sidebar-item {{ Request::is('tambah') ? 'active' : '' }}">
                             <a href="/tambah" class='sidebar-link'>
-                                <i class="bi bi-file-earmark-medical-fill"></i>
-                                <span>Tambah Catatan</span>
+                                <i class="bi bi-pencil"></i> <span>Tambah Catatan</span>
                             </a>
                         </li>
-                        <li class="sidebar-item  ">
+                        <li class="sidebar-title">Akun</li>
+
+                        <li class="sidebar-item  {{ Request::is('logout') ? 'active' : '' }}">
                             <a class='sidebar-link' href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">

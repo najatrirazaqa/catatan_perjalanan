@@ -21,6 +21,7 @@ use App\Http\Controllers\CatatanPerjalananController;
 
 Route::get('/', [CatatanPerjalananController::class, 'home']);
 Route::get('/catatan_perjalanan', [CatatanPerjalananController::class, 'catatan']);
+Route::get('/catatan_perjalanan_json', [CatatanPerjalananController::class, 'json'])->name('json');
 Route::get('/tambah', [CatatanPerjalananController::class, 'create'])->name('create');
 Route::post('/tambah', [CatatanPerjalananController::class, 'store'])->name('store');
 

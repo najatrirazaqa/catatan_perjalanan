@@ -1,18 +1,18 @@
 @include('layouts.header');
 @include('layouts.sidebar');
+<title>Catatan Perjalanan</title>
 <div id="main">
     <div class="page-heading">
         <div class="page-title">
             <div class="row">
                 <div class="col-12 col-md-6 order-md-1 order-last">
-                    <h3>Form Layout</h3>
-                    <p class="text-subtitle text-muted">Multiple form layouts, you can use</p>
+                    <h3>Tambah Catatan</h3>
                 </div>
                 <div class="col-12 col-md-6 order-md-2 order-first">
                     <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Form Layout</li>
+                            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Tambah Catatan</li>
                         </ol>
                     </nav>
                 </div>
@@ -24,7 +24,7 @@
                 <div class="col">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Horizontal Form with Icons</h4>
+                            <h4 class="card-title">Form Tambah Catatan</h4>
                         </div>
                         <div class="card-content">
                             <div class="card-body">
@@ -40,7 +40,7 @@
                                                     <div class="position-relative">
                                                         <input type="date" name="tanggal" class=" form-control">
                                                         <div class="form-control-icon">
-                                                            <i class="bi bi-person"></i>
+                                                            <i class="bi bi-calendar"></i>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -53,7 +53,7 @@
                                                     <div class="position-relative">
                                                         <input type="time" name="waktu" class=" form-control">
                                                         <div class="form-control-icon">
-                                                            <i class="bi bi-envelope"></i>
+                                                            <i class="bi bi-alarm"></i>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -66,7 +66,7 @@
                                                     <div class="position-relative">
                                                         <input type="text" name="lokasi" class=" form-control">
                                                         <div class="form-control-icon">
-                                                            <i class="bi bi-phone"></i>
+                                                            <i class="bi bi-pin-map"></i>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -79,7 +79,7 @@
                                                     <div class="position-relative">
                                                         <input type="text" name="suhu_tubuh" class=" form-control">
                                                         <div class="form-control-icon">
-                                                            <i class="bi bi-lock"></i>
+                                                            <i class="bi bi-thermometer"></i>
                                                         </div>
                                                     </div>
                                                 </div>
